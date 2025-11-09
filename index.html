@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎥 Movie Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+  <!-- Google reCAPTCHA API
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+ reCAPTCHA Overlay (shows before content) 
+  <div id="captcha-overlay" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0e0e0e;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      font-family: Arial, sans-serif;
+    ">
+    <h2 style="margin-bottom: 20px;">Verify you're human to continue</h2>
+    <div class="g-recaptcha"
+         data-sitekey="6Ld7a_0rAAAAAOc86OGaSRdq0GDFB-eb97U0Tv7l"
+         data-callback="captchaVerified"></div>
+  </div> -->
+
+  <!-- Main Website Content -->
+  <div id="main-content" style="display: none;">
+    <h1>🎥 Movie Downloader</h1>
+    <input type="text" placeholder="Search your movie...">
+   
+  <!-- JS: reCAPTCHA callback + your main script -->
+  <script>
+    function captchaVerified() {
+      // Hide the captcha overlay
+      document.getElementById('captcha-overlay').style.display = 'none';
+      // Show the main website content
+      document.getElementById('main-content').style.display = 'block';
+    }
+  </script>
+<div class="movie-list" id="movieList">
+
+<script>
+  function showMessage() {
+    alert("Link not found!!");
+  }
+</script>
+
+  <!-- Movie Block -->
+  <div class="movie">
+    <img src="https://wallpapers.com/images/high/dear-comrade-running-poster-nr5ezqvv4gar8iiy.webp" alt="Inception Poster">
+    <h3>Dear Comrade (2019)</h3>
+    <p>HD | 1.15GB | Hindi</p>
+    <p>FHD | ???GB | Hindi</p>
+    <a class="download-btn" href="https://megaup.net/16c18559bc56d53194c6a0df42f37379/Dear_Comrade_(2020)_Hindi_Dubbed_720p_HDRip_1.1GB.mkv" target="_blank">⬇ Download 720p</a>
+    <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+  </div>
+  
+  
+  <div class="movie">
+  <img src="https://wallpapercave.com/wp/wp11483987.jpg" alt="Movie Poster">
+  <h3>Sita Ramam (2022)</h3>
+  <p>HD | ???GB | Hindi</p>
+  <p>FHD | ???GB | Hindi</p>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 720p</a>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+  <img src="https://wallpapercave.com/wp/wp11847129.jpg" alt="Movie Poster">
+  <h3>18 Pages (2022)</h3>
+  <p>HD | 1.11GB | Hindi</p>
+  <p>FHD | ???GB | Hindi</p>
+  <a class="download-btn" href="https://megaup.net/ca9cf54f12aa37a1cc5e8c1705675820/18_Pages_(2022)%7BHindi(Studio_DUB)-Telugu%7D_720p_HDRip_.mkv" target="_blank">⬇ Download 720p</a>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+  <img src="https://upload.wikimedia.org/wikipedia/en/f/f5/Bheeshma_poster.jpg" alt="Movie Poster">
+  <h3>Bheeshma (2020)</h3>
+  <p>HD | ???GB | Hindi</p>
+  <p>FHD | ???GB | Hindi</p>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 720p</a>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+  <img src="https://wallpapercave.com/wp/wp4149652.jpg" alt="Movie Poster">
+  <h3>
+Geetha Govindam (2018)</h3>
+  <p>HD | 1.28GB | Hindi</p>
+  <p>FHD | ???GB | Hindi</p>
+  <a class="download-btn" href="https://fast-dl.lol/dl/cae47f" target="_blank">⬇ Download 720p</a>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+  <img src="https://i.pinimg.com/736x/96/7d/2a/967d2abbd9396eedf53f632d47c04d51.jpg" alt="Movie Poster">
+  <h3>Good Bye (2022)</h3>
+  <p>HD | ???GB | Hindi</p>
+  <p>FHD | ???GB | Hindi</p>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 720p</a>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+  <img src="https://media5.bollywoodhungama.in/wp-content/uploads/2023/08/Khushi-01.jpg" alt="Movie Poster">
+  <h3>Khushi (2023)</h3>
+  <p>HD | ???GB | Hindi</p>
+  <p>FHD | ???GB | Hindi</p>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 720p</a>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+  <img src="https://wallpapercave.com/wp/wp13926307.jpg" alt="Movie Poster">
+  <h3>The Family Star (2024)</h3>
+  <p>HD | ???GB | Hindi</p>
+  <p>FHD | ???GB | Hindi</p>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 720p</a>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/71/World_Famous_Lover.jpg" alt="World Famous Lover Poster">
+    <h3>World Famous Lover (2020)</h3>
+    <p>HD | 1.4GB | Hindi</p>
+    <p>FHD | 3.0GB | Hindi</p>
+    <a class="download-btn" href="https://fast-dl.lol/dl/a7479a" target="_blank">⬇ Download 720p</a>
+    <a class="download-btn" href="https://fast-dl.lol/dl/0e5f97" target="_blank">⬇ Download 1080p</a>
+  </div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Nota_film_poster.jpg" alt="NOTA Poster">
+    <h3>NOTA (2018)</h3>
+    <p>HD | ???GB | Hindi</p>
+    <p>FHD | ???GB | Hindi</p>
+    <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 720p</a>
+  <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+</div>  
+
+<div class="movie">
+    <img src="https://wallpapers.com/images/high/kgf-chapter-1-rocky-with-shovel-hx7znd05hynn1oah.webp" alt="KGF Chapter 1 Poster">
+    <h3>KGF Chapter 1 (2018)</h3>
+    <p>HD | 1.2GB | Hindi</p>
+    <p>FHD | 3.3GB | Hindi</p>
+    <a class="download-btn" href="https://fast-dl.lol/dl/69f17c" target="_blank">⬇ Download 720p</a>
+    <a class="download-btn" href="https://fast-dl.lol/dl/7c05e1" target="_blank">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d0/K.G.F_Chapter_2.jpg" alt="KGF Chapter 2 Poster">
+    <h3>KGF Chapter 2 (2022)</h3>
+    <p>HD | 1.3GB | Hindi</p>
+    <p>FHD | 2.7GB | Hindi</p>
+    <a class="download-btn" href="https://fast-dl.lol/dl/c6d4b2" target="_blank">⬇ Download 720p</a>
+    <a class="download-btn" href="https://fast-dl.lol/dl/0d96f6" target="_blank">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+    <img src="https://wallpapercave.com/wp/wp13911632.jpg" alt="Aavesham Poster">
+    <h3>Aavesham (2024)</h3>
+    <p>HD | 1.5GB | Hindi</p>
+    <p>FHD | 3.2GB | Hindi</p>
+    <a class="download-btn" href="https://fast-dl.lol/dl/a14013" target="_blank">⬇ Download 720p</a>
+    <a class="download-btn" href="https://fast-dl.lol/dl/0c6040" target="_blank">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+    <img src="https://wallpapercave.com/wp/wp6319615.jpg" alt="Chhichhore Poster">
+    <h3>Chhichhore (2019)</h3>
+    <p>HD | 1.1GB | Hindi</p>
+    <p>FHD | 1.1GB | Hindi</p>
+    <a class="download-btn" href="https://fast-dl.lol/dl/08ea4a" target="_blank">⬇ Download 720p</a>
+    <a class="download-btn" href="https://fast-dl.lol/dl/9ce138" target="_blank">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/48/The_Bengal_Files_poster.jpg" alt="The Bengal Files Poster">
+    <h3>The Bengal Files (2025)</h3>
+    <p>HD | ???GB | Hindi</p>
+    <p>FHD | 4.0GB | Hindi</p>
+    <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 720p</a>
+    <a class="download-btn" href="https://fast-dl.lol/dl/54840d" target="_blank">⬇ Download 1080p</a>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/db/Saiyaara_film_poster.jpg" alt="Chhichhore Poster">
+    <h3>Saiyaara (2025)</h3>
+    <p>HD | 1.3GB | Hindi</p>
+    <p>FHD | 2.9GB | Hindi</p>
+    <a class="download-btn" href="https://vgmlinks.lol/68c45c5f66ac1" target="_blank">⬇ Download 720p</a>
+    <a class="download-btn" href="https://vgmlinks.lol/68c45c7def12d" target="_blank">⬇ Download 1080p</a>
+</div>
+
+  <!-- Add more movies using the same pattern -->
+</div>
+
+<script>
+  function searchMovies() {
+    const input = document.getElementById("searchBar").value.toLowerCase();
+    const movies = document.querySelectorAll(".movie");
+
+    movies.forEach(movie => {
+      const title = movie.querySelector("h3").textContent.toLowerCase();
+      movie.style.display = title.includes(input) ? "" : "none";
+    });
+  }
+
+  // This part runs only if the user is on the "download.html" tab
+  if (window.location.pathname.includes("download.html")) {
+    document.body.innerHTML = ""; // clear previous content
+
+    const params = new URLSearchParams(window.location.search);
+    const movie = params.get("movie");
+
+    const links = {
+      "inception": {
+        "480p": "https://example.com/inception-480p.mp4",
+        "720p": "https://example.com/inception-720p.mp4",
+        "1080p": "https://example.com/inception-1080p.mp4"
+      },
+      // Add more movies here
+    };
+
+    if (movie && links[movie]) {
+      const container = document.createElement("div");
+      container.className = "quality-options";
+      container.innerHTML = <h2>${movie.toUpperCase()} - Choose Quality</h2>;
+
+      for (let quality in links[movie]) {
+        const a = document.createElement("a");
+        a.href = links[movie][quality];
+        a.target = "_blank";
+        a.textContent = `${quality} Download`;
+        container.appendChild(a);
+      }
+
+      document.body.appendChild(container);
+    } else {
+      document.body.innerHTML = "<h2 style='text-align:center'>Movie not found or no download links available.</h2>";
+    }
+  }
+</script>
+
+
+<footer style="
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+">
+  Made with <span style="color: #ff4d6d;">❤️</span> by 
+  <span style="
+      color: #fff;
+      font-size: 1.2em;
+      text-decoration: underline;
+      cursor: pointer;
+      text-shadow: 0 0 10px #fff;
+      transition: 0.3s;
+  " onmouseover="this.style.color='#ffd700'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='#fff'; this.style.transform='scale(1)';">
+    Susamoy Mandi
+  </span>
+
+  <!-- Floating hearts animation -->
+  <div style="
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+  ">
+    <span class="heart" style="position:absolute; font-size:16px; color:#ff4d6d;">❤️</span>
+    <span class="heart" style="position:absolute; font-size:12px; color:#ff6ec4;">💖</span>
+    <span class="heart" style="position:absolute; font-size:14px; color:#fff0ff;">❤️</span>
+  </div>
+</footer>
+
+<script src="logic.js"></script>
+
+<!-- Visitor Counter -->
+<div style="text-align: right; margin: 10px 20px 10px 0;">
+  
+  <!-- Visitor Counter -->
+<div style="text-align: right; margin: 10px -15px 5px 0;">
+  <div class="col-xs-12 mt20" id="bg">
+    <div style="margin-left:auto;width:110px;background:#4a3fa0;text-align:left;display:flex;align-items:center;border-radius:6px;box-shadow:0 0 4px rgba(0,0,0,0.25);padding:3px 4px;">
+      <span style="padding:3px;display:inline-block;border-right:1px solid #7267c2;">
+        <a href="http://visitorshitcounter.com" rel="nofollow noopener" target="_blank">
+          <img src="favicon.png" alt="Visitor Counter" style="width:18px;height:18px;object-fit:contain;border:none;">
+        </a>
+      </span>
+      <span class="text" id="dupli_hit_counter" style="padding:5px 0 0 0;display:inline-block;color:#ffffff;width:100%;text-align:center;font-size:13px;font-family:sans-serif;">Loading...</span>
+      <input type="hidden" id="site_val" value="https://visitorshitcounter.com/counterDisplay?code=c98d332bd460fa43ef0f3e32f3684fe2&style=0017&pad=9&type=page&initCount=1">
+    </div>
+  </div>
+</div>
+<!-- end count -->
+
+
+</div>
+
+
+</div>
+
+
+</body>
+</html>
