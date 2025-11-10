@@ -40,31 +40,3 @@ document.addEventListener("DOMContentLoaded", function() {
   }, 2000);
 });
 
-// // Bot verification using Google reCAPTCHA
-// function captchaVerified(token) {
-//   fetch("verify.php", {
-//     method: "POST",
-//     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-//     body: "token=" + token
-//   })
-//   .then(res => res.json())
-//   .then(data => {
-//     if (data.success) {
-//       const overlay = document.getElementById("captcha-overlay");
-//       const content = document.getElementById("main-content");
-//       overlay.style.opacity = "0";
-//       setTimeout(() => {
-//         overlay.style.display = "none";
-//         content.style.display = "block";
-//       }, 400);
-//     } else {
-//       alert("reCAPTCHA failed. Please try again.");
-//       grecaptcha.reset();
-//     }
-//   })
-//   .catch(err => {
-//     console.error("Verification error:", err);
-//   });
-// }
-
-// // end verification
