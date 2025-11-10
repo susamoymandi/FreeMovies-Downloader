@@ -3,69 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="B3kYfv8SnUGC9reNsAQWTYY_ie76Us13zpQ6HvfqaiY" />
   <title>🎥 Movie Downloader</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-
-  <!-- Google reCAPTCHA API
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
+
 <body>
+  <h1>🎥 Movie Downloader</h1>
+  <input type="text" id="searchBar" placeholder="Search your movie..." onkeyup="searchMovies()">
 
- reCAPTCHA Overlay (shows before content) 
-  <div id="captcha-overlay" style="
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0e0e0e;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      font-family: Arial, sans-serif;
-    ">
-    <h2 style="margin-bottom: 20px;">Verify you're human to continue</h2>
-    <div class="g-recaptcha"
-         data-sitekey="6Ld7a_0rAAAAAOc86OGaSRdq0GDFB-eb97U0Tv7l"
-         data-callback="captchaVerified"></div>
-  </div> -->
+  <div class="movie-list" id="movieList">
 
-  <!-- Main Website Content -->
-  <div id="main-content" style="display: none;">
-    <h1>🎥 Movie Downloader</h1>
-    <input type="text" placeholder="Search your movie...">
+    <script>
+      function showMessage() {
+        alert("Link not found!!");
+      }
+    </script>
+
+    <!-- Add the rest of your movies here (same as your old list) -->
+      
+    <div class="movie">
+      <img src="https://wallpapers.com/images/high/dear-comrade-running-poster-nr5ezqvv4gar8iiy.webp" alt="Inception Poster">
+      <h3>Dear Comrade (2019)</h3>
+      <p>HD | 1.15GB | Hindi</p>
+      <p>FHD | ???GB | Hindi</p>
+      <a class="download-btn" href="https://megaup.net/16c18559bc56d53194c6a0df42f37379/Dear_Comrade_(2020)_Hindi_Dubbed_720p_HDRip_1.1GB.mkv" target="_blank">⬇ Download 720p</a>
+      <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
+    </div>
+
    
-  <!-- JS: reCAPTCHA callback + your main script -->
-  <script>
-    function captchaVerified() {
-      // Hide the captcha overlay
-      document.getElementById('captcha-overlay').style.display = 'none';
-      // Show the main website content
-      document.getElementById('main-content').style.display = 'block';
-    }
-  </script>
-<div class="movie-list" id="movieList">
-
-<script>
-  function showMessage() {
-    alert("Link not found!!");
-  }
-</script>
-
-  <!-- Movie Block -->
-  <div class="movie">
-    <img src="https://wallpapers.com/images/high/dear-comrade-running-poster-nr5ezqvv4gar8iiy.webp" alt="Inception Poster">
-    <h3>Dear Comrade (2019)</h3>
-    <p>HD | 1.15GB | Hindi</p>
-    <p>FHD | ???GB | Hindi</p>
-    <a class="download-btn" href="https://megaup.net/16c18559bc56d53194c6a0df42f37379/Dear_Comrade_(2020)_Hindi_Dubbed_720p_HDRip_1.1GB.mkv" target="_blank">⬇ Download 720p</a>
-    <a class="download-btn" href="#" onclick="showMessage()">⬇ Download 1080p</a>
-  </div>
-  
   
   <div class="movie">
   <img src="https://wallpapercave.com/wp/wp11483987.jpg" alt="Movie Poster">
@@ -202,124 +169,73 @@ Geetha Govindam (2018)</h3>
     <a class="download-btn" href="https://vgmlinks.lol/68c45c5f66ac1" target="_blank">⬇ Download 720p</a>
     <a class="download-btn" href="https://vgmlinks.lol/68c45c7def12d" target="_blank">⬇ Download 1080p</a>
 </div>
-
-  <!-- Add more movies using the same pattern -->
+      
+<div class="movie">
+    <img src="https://i.pinimg.com/736x/21/96/d5/2196d5b3f1c196d756f70c20abbd131e.jpg" alt="Hasee Toh Phasee">
+    <h3>Hasee Toh Phasee (2014)</h3>
+    <p>HD | 1.22GB | Hindi</p>
+    <p>FHD | 2.9GB | Hindi</p>
+    <a class="download-btn" href="https://cloud.indexer.eu.org/-1002732424687/105247/1762345743/40ef928e88ad5afc8d925dcd33e14a08e1dcc30b6f4ed1049bfcc2b0307b7293" target="_blank">⬇ Download 720p</a>
+    <a class="download-btn" href="https://cloud.indexer.eu.org/-1002732424687/105220/1762345399/a8a8a0c1bb244dd871d1b8fff26771cc299ffd654e446515a3edfcffc19fdca9" target="_blank">⬇ Download/Watch Online free 1080p</a>
 </div>
-
-<script>
-  function searchMovies() {
-    const input = document.getElementById("searchBar").value.toLowerCase();
-    const movies = document.querySelectorAll(".movie");
-
-    movies.forEach(movie => {
-      const title = movie.querySelector("h3").textContent.toLowerCase();
-      movie.style.display = title.includes(input) ? "" : "none";
-    });
-  }
-
-  // This part runs only if the user is on the "download.html" tab
-  if (window.location.pathname.includes("download.html")) {
-    document.body.innerHTML = ""; // clear previous content
-
-    const params = new URLSearchParams(window.location.search);
-    const movie = params.get("movie");
-
-    const links = {
-      "inception": {
-        "480p": "https://example.com/inception-480p.mp4",
-        "720p": "https://example.com/inception-720p.mp4",
-        "1080p": "https://example.com/inception-1080p.mp4"
-      },
-      // Add more movies here
-    };
-
-    if (movie && links[movie]) {
-      const container = document.createElement("div");
-      container.className = "quality-options";
-      container.innerHTML = <h2>${movie.toUpperCase()} - Choose Quality</h2>;
-
-      for (let quality in links[movie]) {
-        const a = document.createElement("a");
-        a.href = links[movie][quality];
-        a.target = "_blank";
-        a.textContent = `${quality} Download`;
-        container.appendChild(a);
-      }
-
-      document.body.appendChild(container);
-    } else {
-      document.body.innerHTML = "<h2 style='text-align:center'>Movie not found or no download links available.</h2>";
-    }
-  }
-</script>
-
-
-<footer style="
-    position: relative;
-    text-align: center;
-    margin-top: 40px;
-    padding: 30px 20px;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
-    background: linear-gradient(135deg, #ff6ec4, #7873f5);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-">
-  Made with <span style="color: #ff4d6d;">❤️</span> by 
-  <span style="
-      color: #fff;
-      font-size: 1.2em;
-      text-decoration: underline;
-      cursor: pointer;
-      text-shadow: 0 0 10px #fff;
-      transition: 0.3s;
-  " onmouseover="this.style.color='#ffd700'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='#fff'; this.style.transform='scale(1)';">
-    Susamoy Mandi
-  </span>
-
-  <!-- Floating hearts animation -->
-  <div style="
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-  ">
-    <span class="heart" style="position:absolute; font-size:16px; color:#ff4d6d;">❤️</span>
-    <span class="heart" style="position:absolute; font-size:12px; color:#ff6ec4;">💖</span>
-    <span class="heart" style="position:absolute; font-size:14px; color:#fff0ff;">❤️</span>
+    
   </div>
-</footer>
 
-<script src="logic.js"></script>
+  <!-- Footer -->
+  <footer style="
+      position: relative;
+      text-align: center;
+      margin-top: 40px;
+      padding: 30px 20px;
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  ">
+    Made with <span style="color: #ff4d6d;">❤️</span> by 
+    <span style="
+        color: #fff;
+        font-size: 1.2em;
+        text-decoration: underline;
+        cursor: pointer;
+        text-shadow: 0 0 10px #fff;
+        transition: 0.3s;
+    " onmouseover="this.style.color='#ffd700'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='#fff'; this.style.transform='scale(1)';">
+      Susamoy Mandi
+    </span>
 
-<!-- Visitor Counter -->
-<div style="text-align: right; margin: 10px 20px 10px 0;">
-  
+    <!-- Floating hearts -->
+    <div style="
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+    ">
+      <span class="heart" style="position:absolute; font-size:16px; color:#ff4d6d;">❤️</span>
+      <span class="heart" style="position:absolute; font-size:12px; color:#ff6ec4;">💖</span>
+      <span class="heart" style="position:absolute; font-size:14px; color:#fff0ff;">❤️</span>
+    </div>
+  </footer>
+
   <!-- Visitor Counter -->
-<div style="text-align: right; margin: 10px -15px 5px 0;">
-  <div class="col-xs-12 mt20" id="bg">
-    <div style="margin-left:auto;width:110px;background:#4a3fa0;text-align:left;display:flex;align-items:center;border-radius:6px;box-shadow:0 0 4px rgba(0,0,0,0.25);padding:3px 4px;">
-      <span style="padding:3px;display:inline-block;border-right:1px solid #7267c2;">
-        <a href="http://visitorshitcounter.com" rel="nofollow noopener" target="_blank">
-          <img src="favicon.png" alt="Visitor Counter" style="width:18px;height:18px;object-fit:contain;border:none;">
-        </a>
-      </span>
-      <span class="text" id="dupli_hit_counter" style="padding:5px 0 0 0;display:inline-block;color:#ffffff;width:100%;text-align:center;font-size:13px;font-family:sans-serif;">Loading...</span>
-      <input type="hidden" id="site_val" value="https://visitorshitcounter.com/counterDisplay?code=c98d332bd460fa43ef0f3e32f3684fe2&style=0017&pad=9&type=page&initCount=1">
+  <div style="text-align: right; margin: 10px 20px 10px 0;">
+    <div class="col-xs-12 mt20" id="bg">
+      <div style="margin-left:auto;width:110px;background:#4a3fa0;text-align:left;display:flex;align-items:center;border-radius:6px;box-shadow:0 0 4px rgba(0,0,0,0.25);padding:3px 4px;">
+        <span style="padding:3px;display:inline-block;border-right:1px solid #7267c2;">
+          <a href="http://visitorshitcounter.com" rel="nofollow noopener" target="_blank">
+            <img src="favicon.png" alt="Visitor Counter" style="width:18px;height:18px;object-fit:contain;border:none;">
+          </a>
+        </span>
+        <span class="text" id="dupli_hit_counter" style="padding:5px 0 0 0;display:inline-block;color:#ffffff;width:100%;text-align:center;font-size:13px;font-family:sans-serif;">Loading...</span>
+        <input type="hidden" id="site_val" value="https://visitorshitcounter.com/counterDisplay?code=c98d332bd460fa43ef0f3e32f3684fe2&style=0017&pad=9&type=page&initCount=1">
+      </div>
     </div>
   </div>
-</div>
-<!-- end count -->
 
-
-</div>
-
-
-</div>
-
-
+  <script src="logic.js"></script>
 </body>
 </html>
